@@ -22,8 +22,8 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
-    created_time = models.TimeField()
-    modified_time = models.TimeField()
+    created_time = models.DateTimeField()
+    modified_time = models.DateTimeField()
     excerpt = models.CharField(max_length=200, blank=True)  # 摘抄
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
